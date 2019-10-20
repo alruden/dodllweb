@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .page {
+    display: grid;
+    grid-template-columns: 0% 2fr;
+  }
+
+  .left_side {
+    display: grid;
+    grid-template-rows: 3fr 6fr 3fr;
+    grid-area: "left_side";
+    height: 100vh;
+    align-items: center;
+    padding-left: 5vmin;
+    padding-right: 5vmin;
+    z-index: 100;
+    color: #ffffff;
+  }
+
+  .right_side {
+    display: grid;
+    grid-template-rows: 2fr 5fr 2fr;
+    grid-area: "left_side";
+    height: 100vh;
+    align-items: center;
+    padding-left: 5vmin;
+    padding-right: 5vmin;
+    z-index: 100;
+  }
+
+  .promo {
+    font-size: 0vmin;
+  }
+
+  .page_nav_link {
+    color: #000000;
+    text-decoration: none;
+
+    margin-right: 5vmin;
+    font-size: 4.5vmin;
+    border-bottom: 1vmin solid #eeeeee;
+  }
+
+  .main_text {
+    font-size: 3.5vmin;
+    word-wrap: break-word;
+  }
+
+  .roubm {
+    position: absolute;
+    width: 100vh;
+    height: 100vh;
+    right: 20vmax;
+    bottom: -80vh;
+
+    background: #2C51FD;
+    transform: rotate(-45deg);
+    z-index: 50;
+  }
+
+  .info_nav_link {
+    display: none;
+  }
+
+  .logo {
+    font-size: 10vmin;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .page {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .promo {
+      font-size: 0vmin;
+    }
+
+    .main_text {
+      font-size: 2.8vmin;
+      word-wrap: break-word;
+    }
+
+    .info_nav_link {
+      display: block;
+      font-size: 18pt;
+      padding-bottom: 10px;
+      font-size: 4.5vmin;
+      color: #000000;
+    }
+
+    .roubm {
+      position: absolute;
+      width: 100vh;
+      height: 100vh;
+      right: 45vmax;
+      bottom: -60vh;
+
+      background: #2C51FD;
+      transform: rotate(-45deg);
+      z-index: 50;
+    }
+  }
+
+  @media only screen and (min-width: 1382px) {
+    .page {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .promo {
+      font-size: 8vmin;
+      font-weight: 600;
+    }
+
+    .main_text {
+      font-size: 3.2vmin;
+      word-wrap: break-word;
+    }
+
+    .roubm {
+      position: absolute;
+      width: 200vh;
+      height: 200vh;
+      right: 80vmax;
+      top: -50vh;
+
+      background: #2C51FD;
+      transform: rotate(-45deg);
+      z-index: 50;
+    }
+
+    .info_nav_link {
+      display: block;
+      font-size: 18pt;
+      padding-bottom: 10px;
+      font-size: 4.5vmin;
+      color:#ffffff;
+    }
+  }
+</style>
+
+<body>
+
+  <div class="page">
+    <div class="left_side">
+      <div class="social_nav">social_nav</div>
+      <div class="promo">100% payouts</div>
+      <div class="info_nav">
+        <div id="aPosLink" class="info_nav_link">about&nbsp;LPoS</div>
+        <div id="aUsLink" class="info_nav_link">about&nbsp;Us</div>
+      </div>
+    </div>
+    <div class="right_side">
+      <div class="page_nav">
+        <nav>
+          <a class="page_nav_link" href="#">next payout</a>
+          <a class="page_nav_link" href="#">lottery</a>
+          <a class="page_nav_link" href="#">voting</a>
+        </nav>
+      </div>
+      <div class="main_text">
+        <div id="info1">
+          Welcome to our Waves node!<br>
+          Our main idea is 100% payouts to all participants.<br>
+          You can lease to:<br>
+          <b>3PLp1QsFxukK5nnTBYHAqjz9duWMriDkHeT</b><br>
+          or alias:<br><b>dodllnode</b><br>
+          It’s safe and max profitable!
+        </div>
+      </div>
+      <div class="logo">dodllnode</div>
+    </div>
+  </div>
+  <div class="roubm"></div>
+</body>
+<script>
+  let apos = document.getElementById('aPosLink');
+  let aus = document.getElementById('aUsLink');
+  let info1 = document.getElementById('info1');
+  apos.onclick = () => {
+    info1.innerHTML = `Thanks to Waves LPoS system, the leased funds
+never leave the wallet and remain under the full 
+control of the user.<br><br>
+You can cancel and resume leasing at any time - 
+you will still receive payout for the time that your 
+balance was in leasing on the node.
+But don’t forget that leasing operation takes
+1000 blocks (~17 hours).`;
+  }
+
+  aus.onclick = () => {
+    info1.innerHTML = `We are prize winner of official Waves chalange
+“Game of Nodes”!<br><br>
+We have several servers so our node will have
+100% uptime (even during updates)!<br><br>
+We made many payouts and it’s 100% reliable!`;
+  }
+</script>
+
+</html>
