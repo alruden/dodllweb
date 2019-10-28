@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <title>dodllnode</title>
+
+</head>
+
+<body>
+  <div class="page">
+    <div class="left_side">
+      <div class="social_nav">
+
+        <svg width="32px" height="32px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="16" fill="black" />
+          <rect x="6" y="15.1924" width="13" height="13" transform="rotate(-45 6 15.1924)" fill="#2C51FD" />
+        </svg>
+
+        <img src="img/twitter.svg" height="32px" width="32px" />
+        <img src="img/telegram.svg" height="32px" width="32px" />
+        <img src="img/gmail.svg" height="32px" width="32px" />
+
+
+      </div>
+      <div class="promo">100% payouts</div>
+      <div class="info_nav">
+        <div id="aPosLink" class="info_nav_link">about&nbsp;LPoS</div>
+        <div id="aUsLink" class="info_nav_link">about&nbsp;Us</div>
+      </div>
+    </div>
+    <div class="right_side">
+      <div class="page_nav">
+        <nav>
+          <a class="page_nav_link" href="#">next payout</a>
+          <a class="page_nav_link" href="#">lottery</a>
+          <a class="page_nav_link" href="#">voting</a>
+        </nav>
+      </div>
+      <div class="main_text">
+        <div id="info1">
+          Welcome to our Waves node!<br>
+          Our main idea is 100% payouts to all participants.<br>
+          You can lease to:<br>
+          <b>3PLp1QsFxukK5nnTBYHAqjz9duWMriDkHeT</b><br>
+          or alias:<br><b>dodllnode</b><br>
+          It’s safe and max profitable!
+        </div>
+      </div>
+      <div class="logo">dodllnode</div>
+    </div>
+  </div>
+  <div class="roubm"></div>
+</body>
+<script>
+  let apos = document.getElementById('aPosLink');
+  let aus = document.getElementById('aUsLink');
+  let info1 = document.getElementById('info1');
+  apos.onclick = () => {
+    info1.innerHTML = `Thanks to Waves LPoS system, the leased funds
+never leave the wallet and remain under the full 
+control of the user.<br><br>
+You can cancel and resume leasing at any time - 
+you will still receive payout for the time that your 
+balance was in leasing on the node.
+But don’t forget that leasing operation takes
+1000 blocks (~17 hours).`;
+  }
+
+  aus.onclick = () => {
+    info1.innerHTML = `We are prize winner of official Waves chalange
+“Game of Nodes”!<br><br>
+We have several servers so our node will have
+100% uptime (even during updates)!<br><br>
+We made many payouts and it’s 100% reliable!`;
+  }
+</script>
+
+</html>

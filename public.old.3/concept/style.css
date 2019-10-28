@@ -1,0 +1,108 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.apage{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 150;
+  width: 100vw;
+}
+
+@media only screen and (min-width: 1200px) {
+  .apage{
+    position: absolute;
+    top: 0;
+    left: calc((100vw - 1200px)/2);
+    z-index: 150;
+    width: 1200px;
+  }
+}
+
+.aframe{
+  height: 100vh;
+}
+
+
+#anavbar{
+  position: absolute;
+  left: 0vw;
+  top: 10vh;
+}
+
+
+#info1{
+  position: absolute;
+  right: 10vw;
+  top: 30vh;
+}
+
+#social_nav{
+  padding-top: 5vh;
+  padding-left: 20px;
+}
+
+
+
+.navbar-brand{
+  font-size: 5vmin;
+  padding-right: 2vmin;
+}
+
+.nav-item{
+  font-size: 4vmin;
+  padding-right: 2vmin;
+}
+
+.aslide{
+  padding-right: 2vw;
+}
+
+
+.aslide h1{
+  font-size: 6vmin;
+  color: #1f5af6;
+  padding-top: 2vmin;
+  padding-bottom: 2vmin;
+}
+
+.aslide p{
+  font-size: 3vmin;
+  color: black;
+  padding-left: 2vmin;
+}
+
+.jumbotron{
+  background: rgba(0,0,0,0);
+  margin-top: 15vmin;
+}
+
+.jumbotron h1{
+  color: #1f5af6;
+}
+
+.jumbotron p{
+  font-size: 3vmin;
+}
+
+.roubm {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  right: 85vw;
+  top: 35vh;
+
+  background: #1f5af6;
+  transform: rotate(-45deg);
+  z-index: 50;
+}
+
+#bgcanv{
+  position: absolute;
+  left: 0;
+  top: 0;
+}

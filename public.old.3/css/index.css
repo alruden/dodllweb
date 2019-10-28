@@ -1,0 +1,151 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.left_side {
+  display: grid;
+  grid-template-rows: 3fr 6fr 3fr;
+  grid-area: "left_side";
+  height: 100vh;
+  align-items: center;
+  padding-left: 5vmin;
+  padding-right: 5vmin;
+  z-index: 100;
+  color: #ffffff;
+}
+
+.right_side {
+  display: grid;
+  grid-template-rows: 2fr 5fr 2fr;
+  grid-area: "left_side";
+  height: 100vh;
+  align-items: center;
+  padding-left: 5vmin;
+  padding-right: 5vmin;
+  z-index: 100;
+}
+
+.promo {
+  font-size: 0vmin;
+}
+
+.page_nav_link {
+  color: #000000;
+  text-decoration: none;
+
+  margin-right: 5vmin;
+  font-size: 4.5vmin;
+  border-bottom: 1vmin solid #eeeeee;
+}
+
+.main_text {
+  font-size: 3.5vmin;
+  word-wrap: break-word;
+}
+
+.roubm {
+  position: absolute;
+  width: 100vh;
+  height: 100vh;
+  right: 20vmax;
+  bottom: -80vh;
+
+  background: #2C51FD;
+  transform: rotate(-45deg);
+  z-index: 50;
+}
+
+.info_nav_link {
+  display: none;
+}
+
+.logo {
+  font-size: 10vmin;
+}
+
+@media only screen and (min-width: 768px) {
+  .page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .promo {
+    font-size: 0vmin;
+  }
+
+  .main_text {
+    font-size: 2.8vmin;
+    word-wrap: break-word;
+  }
+
+  .info_nav_link {
+    display: block;
+    font-size: 18pt;
+    padding-bottom: 10px;
+    font-size: 4.5vmin;
+    color: #000000;
+  }
+
+  .roubm {
+    position: absolute;
+    width: 100vh;
+    height: 100vh;
+    right: 45vmax;
+    bottom: -60vh;
+
+    background: #2C51FD;
+    transform: rotate(-45deg);
+    z-index: 50;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .promo {
+    font-size: 8vmin;
+    font-weight: 600;
+  }
+
+  .main_text {
+    font-size: 3.2vmin;
+    word-wrap: break-word;
+  }
+
+  .roubm {
+    position: absolute;
+    width: 200vh;
+    height: 200vh;
+    right: 80vmax;
+    top: -50vh;
+
+    background: #2C51FD;
+    transform: rotate(-45deg);
+    z-index: 50;
+  }
+
+  .info_nav_link {
+    display: block;
+    font-size: 18pt;
+    padding-bottom: 10px;
+    font-size: 4.5vmin;
+    color:#ffffff;
+  }
+}

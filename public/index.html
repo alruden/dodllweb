@@ -5,218 +5,198 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>dodllnode</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<style>
-  *,
-  *:before,
-  *:after {
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-
-  .page {
-    display: grid;
-    grid-template-columns: 0% 2fr;
-  }
-
-  .left_side {
-    display: grid;
-    grid-template-rows: 3fr 6fr 3fr;
-    grid-area: "left_side";
-    height: 100vh;
-    align-items: center;
-    padding-left: 5vmin;
-    padding-right: 5vmin;
-    z-index: 100;
-    color: #ffffff;
-  }
-
-  .right_side {
-    display: grid;
-    grid-template-rows: 2fr 5fr 2fr;
-    grid-area: "left_side";
-    height: 100vh;
-    align-items: center;
-    padding-left: 5vmin;
-    padding-right: 5vmin;
-    z-index: 100;
-  }
-
-  .promo {
-    font-size: 0vmin;
-  }
-
-  .page_nav_link {
-    color: #000000;
-    text-decoration: none;
-
-    margin-right: 5vmin;
-    font-size: 4.5vmin;
-    border-bottom: 1vmin solid #eeeeee;
-  }
-
-  .main_text {
-    font-size: 3.5vmin;
-    word-wrap: break-word;
-  }
-
-  .roubm {
-    position: absolute;
-    width: 100vh;
-    height: 100vh;
-    right: 20vmax;
-    bottom: -80vh;
-
-    background: #2C51FD;
-    transform: rotate(-45deg);
-    z-index: 50;
-  }
-
-  .info_nav_link {
-    display: none;
-  }
-
-  .logo {
-    font-size: 10vmin;
-  }
-
-  @media only screen and (min-width: 768px) {
-    .page {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .promo {
-      font-size: 0vmin;
-    }
-
-    .main_text {
-      font-size: 2.8vmin;
-      word-wrap: break-word;
-    }
-
-    .info_nav_link {
-      display: block;
-      font-size: 18pt;
-      padding-bottom: 10px;
-      font-size: 4.5vmin;
-      color: #000000;
-    }
-
-    .roubm {
-      position: absolute;
-      width: 100vh;
-      height: 100vh;
-      right: 45vmax;
-      bottom: -60vh;
-
-      background: #2C51FD;
-      transform: rotate(-45deg);
-      z-index: 50;
-    }
-  }
-
-  @media only screen and (min-width: 1382px) {
-    .page {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .promo {
-      font-size: 8vmin;
-      font-weight: 600;
-    }
-
-    .main_text {
-      font-size: 3.2vmin;
-      word-wrap: break-word;
-    }
-
-    .roubm {
-      position: absolute;
-      width: 200vh;
-      height: 200vh;
-      right: 80vmax;
-      top: -50vh;
-
-      background: #2C51FD;
-      transform: rotate(-45deg);
-      z-index: 50;
-    }
-
-    .info_nav_link {
-      display: block;
-      font-size: 18pt;
-      padding-bottom: 10px;
-      font-size: 4.5vmin;
-      color:#ffffff;
-    }
-  }
-</style>
 
 <body>
-
-  <div class="page">
-    <div class="left_side">
-      <div class="social_nav">social_nav</div>
-      <div class="promo">100% payouts</div>
-      <div class="info_nav">
-        <div id="aPosLink" class="info_nav_link">about&nbsp;LPoS</div>
-        <div id="aUsLink" class="info_nav_link">about&nbsp;Us</div>
-      </div>
-    </div>
-    <div class="right_side">
-      <div class="page_nav">
-        <nav>
-          <a class="page_nav_link" href="#">next payout</a>
-          <a class="page_nav_link" href="#">lottery</a>
-          <a class="page_nav_link" href="#">voting</a>
+  <div id="notification">
+    <span class="symbol icon-info"></span><span id="notification_text">1212</span></div>
+  <div class="a-all">
+    <div class="a-content">
+      <div class="a-frame">
+        <nav id="a-navbar" class="a-slide navbar navbar-expand-lg navbar-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">next payout</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">voting</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">lottery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">referral</a>
+              </li>
+            </ul>
+          </div>
         </nav>
-      </div>
-      <div class="main_text">
-        <div id="info1">
-          Welcome to our Waves node!<br>
-          Our main idea is 100% payouts to all participants.<br>
-          You can lease to:<br>
-          <b>3PLp1QsFxukK5nnTBYHAqjz9duWMriDkHeT</b><br>
-          or alias:<br><b>dodllnode</b><br>
-          It’s safe and max profitable!
+
+        <div id="a-info1" class="a-slide">
+          <p>
+            Welcome to our Waves node!
+          </p>
+          <p>
+            Our main idea is 100% payouts to all participants.
+          </p>
+          <p>
+            You can lease to:<br>
+            <span class="copybtn"
+              onclick="dodlladdresscopy('copyaddress')"><b>3PLp1QsFxukK5nnTBYHAqjz9duWMriDkHeT</b></span><br>
+            or alias:<br>
+            <span class="copybtn" onclick="dodlladdresscopy('copyalias')"><b>dodllnode</b></span><br>
+          </p>
+          <p>
+            It’s safe and max profitable!
+          </p>
+        </div>
+
+        <div id="a-logo">
+          <a href="#">
+            <svg width="12vh" height="12vh" viewBox="0 0 44 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 0L43.6506 12.5V37.5L22 50L0.349365 37.5V12.5L22 0Z" fill="#1f5af6" />
+            </svg>dodllnode
+          </a>
+        </div>
+
+        <div id="gen_balance">
+          <svg height="12vh" viewBox="-34 0 512 512" width="12vh" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m221.703125 0-221.703125 128v256l221.703125 128 221.703125-128v-256zm176.515625 136.652344-176.515625 101.914062-176.515625-101.914062 176.515625-101.910156zm-368.132812 26.027344 176.574218 101.941406v203.953125l-176.574218-101.945313zm206.660156 305.894531v-203.953125l176.574218-101.941406v203.949218zm0 0" />
+          </svg>
+          <div id="gen_balance_num"></div>
+          <div id="gen_balance_caption">Generating Balance</div>
         </div>
       </div>
-      <div class="logo">dodllnode</div>
-    </div>
-  </div>
-  <div class="roubm"></div>
-</body>
-<script>
-  let apos = document.getElementById('aPosLink');
-  let aus = document.getElementById('aUsLink');
-  let info1 = document.getElementById('info1');
-  apos.onclick = () => {
-    info1.innerHTML = `Thanks to Waves LPoS system, the leased funds
-never leave the wallet and remain under the full 
-control of the user.<br><br>
-You can cancel and resume leasing at any time - 
-you will still receive payout for the time that your 
-balance was in leasing on the node.
-But don’t forget that leasing operation takes
-1000 blocks (~17 hours).`;
-  }
 
-  aus.onclick = () => {
-    info1.innerHTML = `We are prize winner of official Waves chalange
-“Game of Nodes”!<br><br>
-We have several servers so our node will have
-100% uptime (even during updates)!<br><br>
-We made many payouts and it’s 100% reliable!`;
-  }
-</script>
+      <div class="a-frame">
+
+        <div id="a-social" class="a-slide">
+          <a target="_blank" rel="noopener noreferrer" href="https://forum.wavesplatform.com/t/dodllnode-pool/16301">
+            <svg width="8vh" height="8vh" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="16" fill="black" />
+              <rect x="6" y="15.1924" width="13" height="13" transform="rotate(-45 6 15.1924)" fill="#2C51FD" />
+            </svg>
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/dodll_i">
+            <svg height="8vh" viewBox="0 0 512 512" width="8vh" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm116.886719 199.601562c.113281 2.519532.167969 5.050782.167969 7.59375 0 77.644532-59.101563 167.179688-167.183594 167.183594h.003906-.003906c-33.183594 0-64.0625-9.726562-90.066406-26.394531 4.597656.542969 9.277343.8125 14.015624.8125 27.53125 0 52.867188-9.390625 72.980469-25.152344-25.722656-.476562-47.410156-17.464843-54.894531-40.8125 3.582031.6875 7.265625 1.0625 11.042969 1.0625 5.363281 0 10.558593-.722656 15.496093-2.070312-26.886718-5.382813-47.140624-29.144531-47.140624-57.597657 0-.265624 0-.503906.007812-.75 7.917969 4.402344 16.972656 7.050782 26.613281 7.347657-15.777343-10.527344-26.148437-28.523438-26.148437-48.910157 0-10.765624 2.910156-20.851562 7.957031-29.535156 28.976563 35.554688 72.28125 58.9375 121.117187 61.394532-1.007812-4.304688-1.527343-8.789063-1.527343-13.398438 0-32.4375 26.316406-58.753906 58.765625-58.753906 16.902344 0 32.167968 7.144531 42.890625 18.566406 13.386719-2.640625 25.957031-7.53125 37.3125-14.261719-4.394531 13.714844-13.707031 25.222657-25.839844 32.5 11.886719-1.421875 23.214844-4.574219 33.742187-9.253906-7.863281 11.785156-17.835937 22.136719-29.308593 30.429687zm0 0" />
+            </svg>
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://t.me/dodllnode">
+            <svg height="8vh" viewBox="0 0 24 24" width="8vh" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m12 24c6.629 0 12-5.371 12-12s-5.371-12-12-12-12 5.371-12 12 5.371 12 12 12zm-6.509-12.26 11.57-4.461c.537-.194 1.006.131.832.943l.001-.001-1.97 9.281c-.146.658-.537.818-1.084.508l-3-2.211-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953z" />
+            </svg>
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://mailto:nodedodll@gmail.com">
+            <svg width="8vh" height="8vh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216 216" xml:space="preserve">
+              <path
+                d="M108,0C48.353,0,0,48.353,0,108s48.353,108,108,108s108-48.353,108-108S167.647,0,108,0z M156.657,60L107.96,98.498 L57.679,60H156.657z M161.667,156h-109V76.259l50.244,38.11c1.347,1.03,3.34,1.545,4.947,1.545c1.645,0,3.073-0.54,4.435-1.616 l49.374-39.276V156z" />
+            </svg>
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCC0qo2ilflp4VFZykEvx6rg">
+            <svg height="8vh" viewBox="0 0 512 512" width="8vh" xmlns="http://www.w3.org/2000/svg">
+              <path d="m224.113281 303.960938 83.273438-47.960938-83.273438-47.960938zm0 0" />
+              <path
+                d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm159.960938 256.261719s0 51.917969-6.585938 76.953125c-3.691406 13.703125-14.496094 24.507812-28.199219 28.195312-25.035156 6.589844-125.175781 6.589844-125.175781 6.589844s-99.878906 0-125.175781-6.851562c-13.703125-3.6875-24.507813-14.496094-28.199219-28.199219-6.589844-24.769531-6.589844-76.949219-6.589844-76.949219s0-51.914062 6.589844-76.949219c3.6875-13.703125 14.757812-24.773437 28.199219-28.460937 25.035156-6.589844 125.175781-6.589844 125.175781-6.589844s100.140625 0 125.175781 6.851562c13.703125 3.6875 24.507813 14.496094 28.199219 28.199219 6.851562 25.035157 6.585938 77.210938 6.585938 77.210938zm0 0" />
+            </svg>
+          </a>
+
+          <a target="_blank" rel="noopener noreferrer" href="https://w8io.ru/dodllnode">
+            <svg width="8vh" height="8vh" viewBox="0 0 392 392" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="196" cy="196" r="196" fill="black" />
+              <path
+                d="M115.376 219.382L117.427 233.444L120.43 220.773L141.523 146.359H153.389L173.97 220.773L176.899 233.664L179.17 219.309L195.723 146.359H209.858L184.004 253H171.187L149.214 175.29L147.529 167.16L145.845 175.29L123.066 253H110.249L84.4678 146.359H98.5303L115.376 219.382ZM286.689 174.191C286.689 179.514 285.273 184.25 282.441 188.4C279.658 192.551 275.874 195.798 271.089 198.142C276.655 200.534 281.05 204.025 284.272 208.615C287.544 213.205 289.18 218.405 289.18 224.216C289.18 233.444 286.055 240.793 279.805 246.262C273.604 251.73 265.425 254.465 255.269 254.465C245.015 254.465 236.787 251.73 230.586 246.262C224.434 240.744 221.357 233.396 221.357 224.216C221.357 218.454 222.92 213.254 226.045 208.615C229.219 203.977 233.589 200.461 239.155 198.068C234.419 195.725 230.684 192.478 227.949 188.327C225.215 184.177 223.848 179.465 223.848 174.191C223.848 165.207 226.729 158.078 232.49 152.805C238.252 147.531 245.845 144.895 255.269 144.895C264.644 144.895 272.212 147.531 277.974 152.805C283.784 158.078 286.689 165.207 286.689 174.191ZM275.63 223.923C275.63 217.966 273.726 213.107 269.917 209.348C266.157 205.588 261.226 203.708 255.122 203.708C249.019 203.708 244.111 205.563 240.4 209.274C236.738 212.985 234.907 217.868 234.907 223.923C234.907 229.978 236.689 234.738 240.254 238.205C243.867 241.672 248.872 243.405 255.269 243.405C261.616 243.405 266.597 241.672 270.21 238.205C273.823 234.689 275.63 229.929 275.63 223.923ZM255.269 156.027C249.946 156.027 245.625 157.688 242.305 161.008C239.033 164.279 237.397 168.747 237.397 174.411C237.397 179.831 239.009 184.226 242.231 187.595C245.503 190.915 249.849 192.575 255.269 192.575C260.688 192.575 265.01 190.915 268.232 187.595C271.504 184.226 273.14 179.831 273.14 174.411C273.14 168.991 271.455 164.572 268.086 161.154C264.717 157.736 260.444 156.027 255.269 156.027Z"
+                fill="#FCF9F9" />
+            </svg>
+          </a>
+
+        </div>
+
+        <div id="a-aboutus" class="a-slide">
+          <h1>About Us</h1>
+          <p>
+            We are the prize winners of official Waves chalange
+            “Game of Nodes”!
+          </p>
+          <p>
+            We have several servers so our node will have
+            100% uptime (even during updates)!
+          </p>
+          <p>
+            We made many payouts and it’s 100% reliable!
+          </p>
+          <p>
+            You are always can chek our address with <a target="_blank" rel="noopener noreferrer"
+              href="https://wavesexplorer.com/address/3PLp1QsFxukK5nnTBYHAqjz9duWMriDkHeT/tx">Waves
+              blockchain explorer</a>.
+          </p>
+        </div>
+      </div>
+
+      <div class="a-frame">
+        <div id="a-aboutlpos" class="a-slide">
+          <h1>About LPoS</h1>
+          <p>
+            Waves LPoS system guarantees safeness.
+            Your WAVES do not leave wallet when you are
+            leasing and your funds always remain on your full control.
+          </p>
+          <p>
+            You can lease using the official Waves wallet
+            or Trust wallet.
+          </p>
+          <p>
+            You can cancel and resume leasing at any time -
+            you will still receive payout for the time that your
+            balance was in leasing on the node.
+            But don’t forget that leasing operation takes
+            1000 blocks (~17 hours).
+          </p>
+        </div>
+        <div class="wallets">
+            <a target="_blank" rel="noopener noreferrer" href="https://dex.wavesplatform.com"><img id="img-waves-wallet" src="img/waves_wallet.png"></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://trustwallet.com"><img id="img-trust-wallet" src="img/trust_wallet.png"></a>
+        </div>
+      </div>
+
+    </div>
+    <div class="roubm"></div>
+    <div id="roubm2"></div>
+    <div id="roubm3"></div>
+    <div id="hndpayout">
+      <div>100% payout</div>
+      <div id="every_mond">every Monday</div>
+    </div>
+    <input class="unvisible" type="text" id="copyaddress" value="3PLp1QsFxukK5nnTBYHAqjz9duWMriDkHeT">
+    <input class="unvisible" type="text" id="copyalias" value="dodllnode">
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script src="script/main.js"></script>
+
+</body>
 
 </html>

@@ -1,0 +1,302 @@
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+	perspective: 1px;
+	transform-style: preserve-3d;
+}
+
+.a-all{
+  --anchor-a : 0px;
+  --anchor-b : 0px;
+  --slide-width : 100%;
+  --fs-1 : 2.5vh;
+  --fs-2 : 3.5vh;
+  --fs-logo : 8vh;
+}
+
+#img-waves-wallet{
+  position: relative;
+  left: calc(var(--anchor-b) + 2vh);
+  margin-top: 35vh;
+  width: 20vh;
+}
+
+#img-trust-wallet{
+  position: relative;
+  left: calc(var(--anchor-b) + 12vh);
+  margin-top: 35vh;
+  width: 20vh;
+}
+
+@media only screen and (min-width: 768px) {
+  .a-all{
+    --anchor-b : calc(100vw - 768px);
+    --slide-width : 768px;
+    --fs-1 : 3vh;
+    --fs-2 : 5vh;
+    --fs-logo : 11vh;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+  .a-all{
+    --anchor-a : calc((100vw - 1200px)/2);
+    --anchor-b : calc((100vw - 1200px)/2 + 432px);
+  }
+
+  #img-waves-wallet{
+    position: absolute;
+    left: var(--anchor-a);
+    margin-top: -12vh;
+    width: 30vh;
+    padding-left: 2vh;
+  }
+  
+  #img-trust-wallet{
+    position: absolute;
+    left: var(--anchor-a);
+    margin-top: 8vh;
+    width: 30vh;
+    padding-left: 2vh;
+  }
+}
+
+
+.a-content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.a-frame{
+  height: 100vh;
+}
+
+
+.navbar-brand{
+  font-size: 5vmin;
+  padding-right: 2vmin;
+}
+
+
+.nav-item{
+  font-size: 4vmin;
+  padding-right: 2vmin;
+  background: white;
+}
+
+.nav-item a{
+  background: white;
+}
+
+
+.a-slide{
+  padding-right: 2vw;
+  padding-left: 2vw;
+  width: var(--slide-width);
+}
+
+
+.a-slide h1{
+  font-size: var(--fs-2);
+  color: #1f5af6;
+  padding-bottom: 2vh;
+}
+
+.a-slide p{
+  font-size: var(--fs-1);
+  color: black;
+}
+
+
+.roubm {
+  position: absolute;
+  width: 200vh;
+  height: 200vh;
+  left: calc(var(--anchor-b) - 245vh);
+  top: -50vh;
+
+  background: #1f5af6;
+  transform: rotate(-45deg);
+  z-index: 50;
+}
+
+
+#roubm2 {
+  position: absolute;
+  width: 40vh;
+  height: 40vh;
+  right: 10vw;
+  top: 180vh;
+
+  background: #1f5af6;
+  transform: rotate(-45deg);
+  z-index: 50;
+}
+
+#roubm3 {
+  position: absolute;
+  width: 13vh;
+  height: 13vh;
+  right: 7vw;
+  top: 220vh;
+
+  background: #1f5af6;
+  transform: rotate(-45deg);
+  z-index: 50;
+}
+
+#bgcanv{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#a-navbar{
+  position: absolute;
+  left: var(--anchor-b);
+  top: 10vh;
+  margin-left: -8px;
+  z-index: 1500;
+}
+
+
+#a-info1{
+  position: absolute;
+  left: var(--anchor-b);
+  top: 30vh;
+}
+
+#a-logo{
+  position: relative;
+  left: var(--anchor-b);
+  top: 75vh;
+  font-size: var(--fs-logo); 
+}
+
+#a-logo a{
+  text-decoration: none;
+  color: black;
+}
+
+#a-aboutus{
+  position: relative;
+  left: var(--anchor-a);
+  top: 10vh;
+}
+
+#a-aboutlpos{
+  position: relative;
+  left: var(--anchor-b);
+  top: 30vh;  
+}
+
+#a-social{
+  position: relative;
+  left: var(--anchor-a);
+  top: 75vh;   
+}
+
+#a-social a{
+  text-decoration: none;  
+}
+
+#hndpayout{
+  position: relative;
+  left: calc(var(--anchor-b) - 60vh);
+  top: 43vh; 
+  color: white;
+  z-index: 100;
+  font-size: 8vh;  
+}
+
+#every_mond{
+  font-size: 0.5em;
+  padding-left: 1vh;
+}
+
+.copybtn{
+  cursor: pointer;
+}
+
+.copybtn:hover{
+  color: #1f5af6;
+}
+
+/* to-do make this realy unvisible!!! */
+.unvisible{
+  opacity: 0;
+}
+
+#notification{
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  bottom: 10vh;
+  right: 10vw;
+	background-color:#e3f7fc; 
+	color:#555; 
+  border:.1em solid;
+	border-color: #8ed9f6;
+  border-radius:10px;
+  font-size: 18px;
+  padding:10px 10px 10px 10px;
+  margin:10px;
+  cursor: default;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, .15);
+}
+
+
+.symbol {
+	font-size: 0.9em;
+	font-family: Times New Roman;
+	border-radius: 1em;
+	padding: .1em .6em .1em .6em;
+	font-weight: bolder;
+	color: white;
+	background-color: #4E5A56;
+}
+
+.icon-info { background-color: #3229CF; }
+
+.icon-info:before { content: 'i'; }
+
+#notification_text{
+  padding-left: 8px;
+}
+
+
+#gen_balance{
+  position: relative;
+  left: var(--anchor-b);
+  top: 76vh;     
+}
+
+#gen_balance_num{
+  font-size: 9vh; 
+  display: inline;
+}
+
+#gen_balance_caption{
+  font-size: 4vh;
+  margin-top: -5vh;
+  margin-left: 13vh;  
+}
+
+.nav-item-inner{
+  background: white;
+}
+
+#w8logo{
+  color: yellow;
+  font-size: 3.5vh;
+  margin-top: -7vh;
+  margin-left: 44.4vh;
+}
