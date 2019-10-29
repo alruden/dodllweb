@@ -44,15 +44,8 @@ function setGenBalanceText() {
     }
 
     el.innerHTML = `${k6},${k3},${k1}`;
+    document.getElementById('gen_balance_caption').innerHTML = 'Generating Balance';
   };
-
-  /*
-    if (xhr.status === 200) {
-      return xhr.responseText;
-    }
-    else {
-      return null;
-    }*/
 }
 
 window.onload = (event) => {

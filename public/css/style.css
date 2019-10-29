@@ -32,6 +32,7 @@ body {
   width: 20vh;
 }
 
+
 @media only screen and (min-width: 768px) {
   .a-all{
     --anchor-b : calc(100vw - 768px);
@@ -43,7 +44,7 @@ body {
 
 }
 
-@media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 1200px) {
   .a-all{
     --anchor-a : calc((100vw - 1200px)/2);
     --anchor-b : calc((100vw - 1200px)/2 + 432px);
@@ -66,7 +67,6 @@ body {
   }
 }
 
-
 .a-content{
   position: absolute;
   top: 0;
@@ -78,7 +78,6 @@ body {
 .a-frame{
   height: 100vh;
 }
-
 
 .navbar-brand{
   font-size: 5vmin;
@@ -237,16 +236,23 @@ body {
 
 #notification{
   display: none;
+
+  position: absolute;
+  left: var(--anchor-b);
+  top: 68vh;
+
+/*
   position: fixed;
-  z-index: 2000;
   bottom: 10vh;
-  right: 10vw;
-	background-color:#e3f7fc; 
+  right: 10vw;*/
+
+  z-index: 2000;
+	background-color:white; 
 	color:#555; 
   border:.1em solid;
-	border-color: #8ed9f6;
+	border-color: #3229CF;
   border-radius:10px;
-  font-size: 18px;
+  font-size: 2vmin;
   padding:10px 10px 10px 10px;
   margin:10px;
   cursor: default;
