@@ -236,16 +236,9 @@ body {
 
 #notification{
   display: none;
-
   position: absolute;
   left: var(--anchor-b);
   top: 68vh;
-
-/*
-  position: fixed;
-  bottom: 10vh;
-  right: 10vw;*/
-
   z-index: 2000;
 	background-color:white; 
 	color:#555; 

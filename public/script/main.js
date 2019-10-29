@@ -1,8 +1,13 @@
 function dodlladdresscopy(id) {
+
   let copyText = document.getElementById(id);
   copyText.select();
   copyText.setSelectionRange(0, 99999);
   document.execCommand("copy");
+  
+  if (document.body.clientWidth < 768){
+    return;
+  }
 
   let nel = document.getElementById('notification');
   let ntxt = document.getElementById('notification_text');
