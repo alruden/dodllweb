@@ -26,29 +26,9 @@ function setGenBalanceText() {
   xhr.send(null);
 
   xhr.onload = function () {
-    function fixed3(x) {
-      if (x < 10) {
-        return `00${x}`;
-      }
-      else if(x < 100){
-        return `0${x}`;
-      }
-      return x;
-    }
-
-    let generating = Math.floor(((JSON.parse(xhr.response)).generating) / 100000000);
     let el = document.getElementById('gen_balance_num');
-    let k6 = Math.floor(generating / 1000000);
-    let k3 = Math.floor((generating - k6 * 1000000) / 1000);
-    let k1 = Math.floor(generating - k3 * 1000 - k6 * 1000000);
-    if (k3 > 0) {
-      k1 = fixed3(k1);
-    }
-    if (k6 > 0) {
-      k3 = fixed3(k3);
-    }
-
-    el.innerHTML = `${k6},${k3},${k1}`;
+    let generating = Math.floor(((JSON.parse(xhr.response)).generating) / 100000000);
+    el.innerHTML = new Intl.NumberFormat("jp-JP",{minimumIntegerDigits: 1, minimumFractionDigits: 0, maximumFractionDigits: 0}).format(generating);
     document.getElementById('gen_balance_caption').innerHTML = 'Generating Balance';
   };
 }
