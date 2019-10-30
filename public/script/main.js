@@ -18,6 +18,16 @@ function dodlladdresscopy(id) {
   }, 3000);
 }
 
+function setWavesText(id, num){
+  str = String(Math.floor(num/100000000));
+  let pos = str.length - 3;
+  while(pos > 0){
+    str = `${str.slice(0, pos)},${str.slice(pos)}`;
+    pos -= 3;
+  }
+  document.getElementById(id).innerHTML = str;
+}
+
 function setGenBalanceText() {
   let xhr = new XMLHttpRequest();
   let url = `https://nodes.wavesnodes.com/addresses/balance/details/3PLp1QsFxukK5nnTBYHAqjz9duWMriDkHeT`;
@@ -26,13 +36,9 @@ function setGenBalanceText() {
   xhr.send(null);
 
   xhr.onload = function () {
-    let el = document.getElementById('gen_balance_num');
-    let elm = document.getElementById('mined_num');
-    let generating = Math.floor(((JSON.parse(xhr.response)).generating) / 100000000);
-    let mined = Math.floor(((JSON.parse(xhr.response)).available) / 100000000);
-    el.innerHTML = new Intl.NumberFormat("jp-JP",{minimumIntegerDigits: 1, minimumFractionDigits: 0, maximumFractionDigits: 0}).format(generating);
-    elm.innerHTML = new Intl.NumberFormat("jp-JP",{minimumIntegerDigits: 1, minimumFractionDigits: 0, maximumFractionDigits: 0}).format(mined);
-    document.getElementById('gen_balance_caption').innerHTML = 'Generating Balance';
+    let balances = JSON.parse(xhr.response);
+    setWavesText('gen_balance_num', balances.generating);
+    setWavesText('mined_num', balances.available);
     document.getElementById('mined_txt').innerHTML = 'WAVES mined';
     document.getElementById('mined_txt2').innerHTML = 'from last payout';
   };
