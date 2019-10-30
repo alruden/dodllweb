@@ -18,19 +18,175 @@ body {
   --fs-logo : 8vh;
 }
 
+
 #img-waves-wallet{
   position: relative;
   left: calc(var(--anchor-b) + 2vh);
-  margin-top: 35vh;
+  margin-left: 2vh;
+  margin-top: -103vh;
   width: 20vh;
 }
 
 #img-trust-wallet{
   position: relative;
   left: calc(var(--anchor-b) + 12vh);
-  margin-top: 35vh;
+  margin-left: 2vh;
+  margin-top: -103vh;
   width: 20vh;
 }
+
+
+#a-info1{
+  position: absolute;
+  margin-left: 2vh;
+  left: var(--anchor-b);
+  top: 30vh;
+}
+
+#a-logo {
+  position: relative;
+  margin-left: 6vh;
+  left: var(--anchor-b);
+  top: 10vh;
+  font-size: var(--fs-logo);
+}
+
+#a-logo a{
+  text-decoration: none;
+  color: black;
+}
+
+#a-aboutus{
+  position: relative;
+  margin-left: 2vh;
+  left: var(--anchor-a);
+  top: -25vh;
+}
+
+#a-social{
+  position: relative;
+  margin-left: 2vh;
+  left: var(--anchor-a);
+  top: 26vh;   
+}
+
+#a-aboutlpos{
+  position: relative;
+  margin-left: 2vh;
+  left: var(--anchor-b);
+  top: -58vh;  
+}
+
+
+
+#gen_balance{
+  position: relative;
+  margin-left: 6vh;
+  left: var(--anchor-b);
+  top: 48vh;     
+}
+
+#gen_balance_num{
+  font-size: 9vh; 
+  display: inline;
+}
+
+#gen_balance_caption{
+  font-size: 4vh;
+  margin-top: -5vh;
+  margin-left: 13vh;  
+}
+
+#roubm2 {
+  position: absolute;
+  width: 25vh; 
+  height: 25vh;
+  right: 10vw;
+  top: 138vh;
+  background: #1f5af6;
+  transform: rotate(-45deg);
+  z-index: 50;
+  opacity: 0.50;
+}
+#roubm3 {
+  position: absolute;
+  width: 9vh;
+  height: 9vh;
+  right: 6vw;
+  top: 162vh;
+  background: #1f5af6;
+  transform: rotate(-45deg);
+  z-index: 50;
+  opacity: 0.50;
+}
+
+
+
+@media only screen and (max-width: 536px) {
+  .a-all {
+  --anchor-a : 0px;
+  --anchor-b : 0px;
+  --slide-width : 100%;
+  --fs-1 : 2vh;
+  --fs-2 : 2.75vh;
+  --fs-logo : 5.75vh;
+  }
+
+  #gen_balance_num{
+    font-size: 6vh; 
+    display: inline;
+  }
+  
+  #gen_balance_caption{
+    font-size: 3vh;
+    margin-top: -5vh;
+    margin-left: 13vh;  
+  }
+
+  #a-info1{
+    position: absolute;
+    margin-left: 2vh;
+    left: var(--anchor-b);
+    top: 30vh;
+  }
+
+  #a-aboutus{
+    position: relative;
+    margin-left: 2vh;
+    left: var(--anchor-a);
+    top: -32vh;
+  }
+
+  #a-social{
+    position: relative;
+    margin-left: 2vh;
+    left: var(--anchor-a);
+    top: 20vh;   
+  }
+  
+
+}
+
+@media only screen and (max-width: 378px) {
+
+  #gen_balance_num{
+    font-size: 4.8vh; 
+    display: inline;
+  }
+  
+  #gen_balance_caption{
+    font-size: 2.3vh; 
+  }
+
+}
+
+
+
+
+
+
+
+
 
 
 @media only screen and (min-width: 768px) {
@@ -42,9 +198,95 @@ body {
     --fs-logo : 11vh;
   }
 
+
+  #a-logo {
+    position: relative;
+    margin-left: 0vh;
+    left: var(--anchor-b);
+    top: 75vh;
+    font-size: var(--fs-logo); 
+  }
+
+  #a-logo a{
+    text-decoration: none;
+    color: black;
+  }
+
+  #gen_balance{
+    position: relative;
+    margin-left: 0vh;
+    left: var(--anchor-b);
+    top: 76vh;     
+  }
+
+  #a-aboutus{
+    position: relative;
+    left: var(--anchor-a);
+    top: 10vh;
+  }
+
+  #a-social{
+    position: relative;
+    left: var(--anchor-a);
+    top: 75vh;   
+  }
+
+  #roubm2 {
+    position: absolute;
+    width: 40vh;
+    height: 40vh;
+    right: 10vw;
+    top: 180vh;
+  
+    background: #1f5af6;
+    transform: rotate(-45deg);
+    z-index: 50;
+    opacity: 1;
+  }
+  
+  #roubm3 {
+    position: absolute;
+    width: 13vh;
+    height: 13vh;
+    right: 7vw;
+    top: 220vh;
+  
+    background: #1f5af6;
+    transform: rotate(-45deg);
+    z-index: 50;
+    opacity: 1;
+  }
+
+  #a-aboutlpos{
+    position: relative;
+    left: var(--anchor-b);
+    top: 30vh;  
+  }
+
+  #img-waves-wallet{
+    position: relative;
+    left: calc(var(--anchor-b) + 2vh);
+    margin-top: 35vh;
+    width: 20vh;
+  }
+  
+  #img-trust-wallet{
+    position: relative;
+    left: calc(var(--anchor-b) + 12vh);
+    margin-top: 35vh;
+    width: 20vh;
+  }
+  
 }
 
-  @media only screen and (min-width: 1200px) {
+
+
+
+
+
+
+
+@media only screen and (min-width: 1200px) {
   .a-all{
     --anchor-a : calc((100vw - 1200px)/2);
     --anchor-b : calc((100vw - 1200px)/2 + 432px);
@@ -53,6 +295,7 @@ body {
   #img-waves-wallet{
     position: absolute;
     left: var(--anchor-a);
+    margin-left: 0vh;
     margin-top: -12vh;
     width: 30vh;
     padding-left: 2vh;
@@ -61,11 +304,15 @@ body {
   #img-trust-wallet{
     position: absolute;
     left: var(--anchor-a);
+    margin-left: 0vh;
     margin-top: 8vh;
     width: 30vh;
     padding-left: 2vh;
   }
 }
+
+
+
 
 .a-content{
   position: absolute;
@@ -103,6 +350,8 @@ body {
 }
 
 
+
+
 .a-slide h1{
   font-size: var(--fs-2);
   color: #1f5af6;
@@ -127,31 +376,6 @@ body {
   z-index: 50;
 }
 
-
-#roubm2 {
-  position: absolute;
-  width: 40vh;
-  height: 40vh;
-  right: 10vw;
-  top: 180vh;
-
-  background: #1f5af6;
-  transform: rotate(-45deg);
-  z-index: 50;
-}
-
-#roubm3 {
-  position: absolute;
-  width: 13vh;
-  height: 13vh;
-  right: 7vw;
-  top: 220vh;
-
-  background: #1f5af6;
-  transform: rotate(-45deg);
-  z-index: 50;
-}
-
 #bgcanv{
   position: absolute;
   left: 0;
@@ -161,46 +385,9 @@ body {
 #a-navbar{
   position: absolute;
   left: var(--anchor-b);
-  top: 10vh;
+  top: 6vh;
   margin-left: -8px;
   z-index: 1500;
-}
-
-
-#a-info1{
-  position: absolute;
-  left: var(--anchor-b);
-  top: 30vh;
-}
-
-#a-logo{
-  position: relative;
-  left: var(--anchor-b);
-  top: 75vh;
-  font-size: var(--fs-logo); 
-}
-
-#a-logo a{
-  text-decoration: none;
-  color: black;
-}
-
-#a-aboutus{
-  position: relative;
-  left: var(--anchor-a);
-  top: 10vh;
-}
-
-#a-aboutlpos{
-  position: relative;
-  left: var(--anchor-b);
-  top: 30vh;  
-}
-
-#a-social{
-  position: relative;
-  left: var(--anchor-a);
-  top: 75vh;   
 }
 
 #a-social a{
@@ -271,23 +458,6 @@ body {
   padding-left: 8px;
 }
 
-
-#gen_balance{
-  position: relative;
-  left: var(--anchor-b);
-  top: 76vh;     
-}
-
-#gen_balance_num{
-  font-size: 9vh; 
-  display: inline;
-}
-
-#gen_balance_caption{
-  font-size: 4vh;
-  margin-top: -5vh;
-  margin-left: 13vh;  
-}
 
 .nav-item-inner{
   background: white;
