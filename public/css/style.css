@@ -18,21 +18,21 @@ body {
   --fs-logo : 8vh;
 }
 
-
+/* _____________MOBILE VERSION___________________ */
 
 #img-waves-wallet{
   position: relative;
   left: calc(var(--anchor-b) + 2vh);
-  margin-left: 2vh;
-  margin-top: -103vh;
+  margin-left: 3vh;
+  margin-top: -58vh;
   width: 20vh;
 }
 
 #img-trust-wallet{
   position: relative;
-  left: calc(var(--anchor-b) + 12vh);
+  left: calc(var(--anchor-b) + 8vh);
   margin-left: 2vh;
-  margin-top: -103vh;
+  margin-top: -58vh;
   width: 20vh;
 }
 
@@ -61,21 +61,37 @@ body {
   position: relative;
   margin-left: 2vh;
   left: var(--anchor-a);
-  top: -25vh;
+  top: -16vh;
 }
+
+#blackslideAboutUs {
+  position: relative;
+  bottom: 6.58vh;
+  left: -8vh;
+  z-index: -20;
+}
+
+#blackslideAboutLPoS {
+  position: relative;
+  bottom: 6.58vh;
+  left: -8vh;
+  z-index: -20;
+}
+
+
 
 #a-social{
   position: relative;
   margin-left: 2vh;
   left: var(--anchor-a);
-  top: 26vh;   
+  top: 40vh;   
 }
 
 #a-aboutlpos{
   position: relative;
   margin-left: 2vh;
   left: var(--anchor-b);
-  top: -58vh;  
+  top: -41vh;  
 }
 
 
@@ -84,18 +100,19 @@ body {
   position: relative;
   margin-left: 6vh;
   left: var(--anchor-b);
-  top: 49vh;     
+  top: 53vh;     
 }
 
 #gen_balance_num{
   font-size: 9vh; 
   display: inline;
+  margin-left: 1vh;
 }
 
 #gen_balance_caption{
   font-size: 4vh;
   margin-top: -5vh;
-  margin-left: 13vh;  
+  margin-left: 13.8vh;  
 }
 
 #roubm2 {
@@ -103,7 +120,7 @@ body {
   width: 25vh; 
   height: 25vh;
   right: 10vw;
-  top: 138vh;
+  top: 156vh;
   background: #1f5af6;
   transform: rotate(-45deg);
   z-index: 50;
@@ -114,7 +131,7 @@ body {
   width: 9vh;
   height: 9vh;
   right: 6vw;
-  top: 162vh;
+  top: 180vh;
   background: #1f5af6;
   transform: rotate(-45deg);
   z-index: 50;
@@ -152,27 +169,52 @@ body {
   opacity: 0;
 }
 
+#pureblack_bottom {
+  position: absolute;
+  bottom: auto;
+
+}
+
+#text_bottom p{
+  position: relative;
+    margin-left: 2vh;
+    margin-bottom: 3vh;
+    top: 8vh;
+    color: white;
+}
+
+
+/* _____________ULTRAMOBILE VERSION___________________ */
+
 
 @media only screen and (max-width: 536px) {
   .a-all {
   --anchor-a : 0px;
   --anchor-b : 0px;
   --slide-width : 100%;
-  --fs-1 : 2.3vh;
-  --fs-2 : 2.8vh;
-  --fs-logo : 6.25vh;
+  --fs-1 : 2.35vh;
+  --fs-2 : 2.88vh;
+  --fs-logo : 6.3vh;
+  }
+
+  #gen_balance{
+    position: relative;
+    margin-left: 6vh;
+    left: var(--anchor-b);
+    top: 53vh;     
   }
 
   #gen_balance_num{
     font-size: 6vh; 
     display: inline;
+    margin-left: 1vh;
     --slide-width : 175%
   }
   
   #gen_balance_caption{
     font-size: 3vh;
     margin-top: -5vh;
-    margin-left: 13vh;
+    margin-left: 13.8vh;
     --slide-width : 175%  
   }
 
@@ -181,46 +223,74 @@ body {
     margin-left: 2vh;
     left: var(--anchor-b);
     top: 30vh;
-    --slide-width : 120%
+    --slide-width : 108%
   }
 
   #a-aboutus{
     position: relative;
     margin-left: 2vh;
     left: var(--anchor-a);
-    top: -32vh;
-    --slide-width : 108%
+    top: -16vh;
+    --slide-width : 103%
   }
 
   #a-social{
     position: relative;
     margin-left: 2vh;
     left: var(--anchor-a);
-    top: 20vh;   
-    --slide-width : 120%
+    top: 48vh;   
+    --slide-width : 135%
+  }
+
+  #a-aboutlpos{
+    position: relative;
+    margin-left: 2vh;
+    left: var(--anchor-b);
+    top: -33vh;  
   }
   
   #img-waves-wallet{
-    position: relative;
-    
-    margin-left: auto;
-    margin-top: -103vh;
+    position: relative; 
+    margin-left: 3vh;
+    margin-top: -48vh;
     width: 15vh;
   }
   
   #img-trust-wallet{
     position: relative;
-    
-    margin-right: auto;
-    margin-top: -103vh;
+    margin-top: -48vh;
     width: 15vh;
   }
+
+  #roubm2 {
+    position: absolute;
+    width: 25vh; 
+    height: 25vh;
+    right: 10vw;
+    top: 162vh;
+    background: #1f5af6;
+    transform: rotate(-45deg);
+    z-index: 50;
+    opacity: 0.50;
+  }
+  #roubm3 {
+    position: absolute;
+    width: 9vh;
+    height: 9vh;
+    right: 6vw;
+    top: 186vh;
+    background: #1f5af6;
+    transform: rotate(-45deg);
+    z-index: 50;
+    opacity: 0.50;
+  }
+
 
 }
 
 
 
-
+/* _____________DESCTOP VERSION___________________ */
 
 
 
@@ -253,6 +323,18 @@ body {
     margin-left: 0vh;
     left: var(--anchor-b);
     top: 76vh;     
+  }
+
+  #gen_balance_num{
+    font-size: 9vh; 
+    display: inline;
+    margin-left: 3vh;
+  }
+  
+  #gen_balance_caption{
+    font-size: 4vh;
+    margin-top: -5vh;
+    margin-left: 16.8vh;  
   }
 
   #a-aboutus{
@@ -344,12 +426,43 @@ body {
     width: 20vh;
   }
   
+  #pureblack_bottom {
+    position: absolute;
+    bottom: auto;
+    opacity: 0;
+  
+  }
+  
+  #text_bottom p{
+    position: relative;
+      margin-left: 2vh;
+      margin-bottom: 3vh;
+      top: 6vh;
+      color: white;
+      opacity: 0;
+  }
+
+  #blackslideAboutUs {
+    position: relative;
+    bottom: 6.58vh;
+    left: -8vh;
+    z-index: -20;
+    opacity: 0;
+  }
+  
+  #blackslideAboutLPoS {
+    position: relative;
+    bottom: 6.58vh;
+    left: -8vh;
+    z-index: -20;
+    opacity: 0;
+  }
 }
 
 
 
 
-
+/* _____________WALLETS LEFT___________________ */
 
 
 
@@ -378,7 +491,7 @@ body {
   }
 }
 
-
+/* _____________GLOBAL___________________ */
 
 
 .a-content{

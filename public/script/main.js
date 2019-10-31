@@ -39,9 +39,10 @@ function setGenBalanceText() {
     let balances = JSON.parse(xhr.response);
     setWavesText('gen_balance_num', balances.generating);
     setWavesText('mined_num', balances.available);
+    setWavesText('mined_num2', balances.available);
     document.getElementById('gen_balance_caption').innerHTML = 'Generating Balance';
     document.getElementById('mined_txt').innerHTML = 'WAVES mined';
-    document.getElementById('mined_txt2').innerHTML = 'from last payout';
+    document.getElementById('mined_txt2').innerHTML = 'since last payout';
   };
 }
 
