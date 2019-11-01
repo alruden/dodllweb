@@ -40,7 +40,7 @@ function setGenBalanceText() {
     setWavesText('gen_balance_num', balances.generating);
     setWavesText('mined_num', balances.available);
     setWavesText('mined_num2', balances.available);
-    document.getElementById('gen_balance_caption').innerHTML = 'Generating Balance';
+    document.getElementById('gen_balance_caption').innerHTML = 'Generating&nbsp;Balance';
     document.getElementById('mined_txt').innerHTML = 'WAVES mined';
     document.getElementById('mined_txt2').innerHTML = 'since last payout';
   };

@@ -6,16 +6,19 @@ body {
   padding: 0px;
   overflow-x: hidden;
 	perspective: 1px;
-	transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
+
 .a-all{
+
   --anchor-a : 0px;
   --anchor-b : 0px;
   --slide-width : 100%;
   --fs-1 : 2.5vh;
   --fs-2 : 3.5vh;
   --fs-logo : 8vh;
+  
 }
 
 /* _____________MOBILE VERSION___________________ */
@@ -55,7 +58,10 @@ body {
 #a-logo a{
   text-decoration: none;
   color: black;
+  font-weight: 500;
 }
+
+
 
 #a-aboutus{
   position: relative;
@@ -66,14 +72,14 @@ body {
 
 #blackslideAboutUs {
   position: relative;
-  bottom: 6.58vh;
+  bottom: 7vh;
   left: -8vh;
   z-index: -20;
 }
 
 #blackslideAboutLPoS {
   position: relative;
-  bottom: 6.58vh;
+  bottom: 7vh;
   left: -8vh;
   z-index: -20;
 }
@@ -100,7 +106,7 @@ body {
   position: relative;
   margin-left: 6vh;
   left: var(--anchor-b);
-  top: 53vh;     
+  top: 57vh;     
 }
 
 #gen_balance_num{
@@ -112,7 +118,8 @@ body {
 #gen_balance_caption{
   font-size: 4vh;
   margin-top: -5vh;
-  margin-left: 13.8vh;  
+  margin-left: 15vh; 
+  font-weight: 300; 
 }
 
 #roubm2 {
@@ -172,7 +179,6 @@ body {
 #pureblack_bottom {
   position: absolute;
   bottom: auto;
-
 }
 
 #text_bottom p{
@@ -183,11 +189,18 @@ body {
     color: white;
 }
 
+#blacklogo {
+  position: relative;
+  top: -258px;
+  left: 12vh;
+  z-index: -20;
+}
+
 
 /* _____________ULTRAMOBILE VERSION___________________ */
 
 
-@media only screen and (max-width: 536px) {
+@media only screen and (max-width: 580px) {
   .a-all {
   --anchor-a : 0px;
   --anchor-b : 0px;
@@ -201,45 +214,50 @@ body {
     position: relative;
     margin-left: 6vh;
     left: var(--anchor-b);
-    top: 53vh;     
+    top: 57vh;
+    font-weight: 600;    
   }
 
   #gen_balance_num{
     font-size: 6vh; 
     display: inline;
     margin-left: 1vh;
-    --slide-width : 175%
+    --slide-width : 175%;
+    font-weight: 600;
   }
   
   #gen_balance_caption{
     font-size: 3vh;
     margin-top: -5vh;
-    margin-left: 13.8vh;
-    --slide-width : 175%  
+    margin-left: 13.8888vh;
+    --slide-width : 175%;
+    font-weight: 300; 
   }
 
   #a-info1{
     position: absolute;
     margin-left: 2vh;
     left: var(--anchor-b);
-    top: 30vh;
+    top: 31vh;
     --slide-width : 108%
   }
+
 
   #a-aboutus{
     position: relative;
     margin-left: 2vh;
     left: var(--anchor-a);
     top: -16vh;
-    --slide-width : 103%
+    --slide-width : 103%;
   }
 
   #a-social{
     position: relative;
     margin-left: 2vh;
-    left: var(--anchor-a);
+    left: -4vh;
     top: 48vh;   
-    --slide-width : 135%
+    transform: scale(0.88);
+    --slide-width : 135%;
   }
 
   #a-aboutlpos{
@@ -288,6 +306,58 @@ body {
 
 }
 
+@media only screen and (max-width: 375px) {
+
+  #gen_balance{
+    position: relative;
+    margin-left: 6vh;
+    left: var(--anchor-b);
+    top: 57vh;
+    font-weight: 500;    
+  }
+
+  #gen_balance_num{
+    font-size: 5vh; 
+    display: inline;
+    margin-left: 1vh;
+    --slide-width : 175%;
+    font-weight: 500;
+  }
+  
+  #gen_balance_caption{
+    font-size: 3vh;
+    margin-top: -5vh;
+    margin-left: 13.8888vh;
+    --slide-width : 175%;
+    font-weight: 250; 
+  }
+
+  #a-logo {
+    position: relative;
+    margin-left: 6vh;
+    left: var(--anchor-b);
+    top: 10vh;
+    font-size: 5vh;
+  }
+  
+  #a-logo a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 5vh;
+  }
+
+  #a-social{
+    position: relative;
+    margin-left: 2vh;
+    left: -6vh;
+    top: 48vh;
+    --slide-width: 135%;
+    transform: scale(0.75);
+  }
+
+}
+
 
 
 /* _____________DESCTOP VERSION___________________ */
@@ -313,9 +383,12 @@ body {
     font-size: var(--fs-logo); 
   }
 
+ 
+
   #a-logo a{
     text-decoration: none;
     color: black;
+    font-weight: 400;
   }
 
   #gen_balance{
@@ -334,7 +407,7 @@ body {
   #gen_balance_caption{
     font-size: 4vh;
     margin-top: -5vh;
-    margin-left: 16.8vh;  
+    margin-left: 17.8vh;  
   }
 
   #a-aboutus{
@@ -365,18 +438,17 @@ body {
   #mined_num {
     position: relative;
     color: white;
-    transform: rotate(45deg);
-    right: 8vh;
-    left: 13vh;
-    top: 15vh;
+    right: auto;
+    left: 4vh;
+    top: 8vh;
     font-size: 10vh;
     opacity: 1;
+    text-align: center;
   }
 
   #mined_txt {
     position: relative;
-    color: white;
-    transform: rotate(45deg);
+    color: white;  
     right: 1vh;
     top: 9vh;
     font-size: 5vh;
@@ -386,7 +458,6 @@ body {
   #mined_txt2 {
     position: relative;
     color: white;
-    transform: rotate(45deg);
     right: 1vh;
     top: 9vh;
     font-size: 3vh;
@@ -457,6 +528,14 @@ body {
     z-index: -20;
     opacity: 0;
   }
+
+  #blacklogo {
+    position: relative;
+    top: -258px;
+    left: 12vh;
+    z-index: -20;
+    opacity: 0;
+  }
 }
 
 
@@ -499,7 +578,7 @@ body {
   top: 0;
   left: 0;
   z-index: 1000;
-  width: 100%;
+  width: 100%
 }
 
 .a-frame{
