@@ -7,6 +7,7 @@ body {
   overflow-x: hidden;
 	perspective: 1px;
   transform-style: preserve-3d;
+  min-width: 350px;
 }
 
 
@@ -153,7 +154,7 @@ body {
   left: 13vh;
   top: 15vh;
   font-size: 10vh;
-  opacity: 0;
+  display: none;
 }
 
 #mined_txt {
@@ -163,7 +164,7 @@ body {
   right: 1vh;
   top: 9vh;
   font-size: 5vh;
-  opacity: 0;
+  display: none;
 }
 
 #mined_txt2 {
@@ -173,21 +174,35 @@ body {
   right: 1vh;
   top: 9vh;
   font-size: 3vh;
-  opacity: 0;
+  display: none;
 }
 
 #pureblack_bottom {
-  position: absolute;
+  position: relative;
   bottom: auto;
 }
 
-#text_bottom p{
-  position: relative;
-    margin-left: 2vh;
-    margin-bottom: 3vh;
-    top: 8vh;
-    color: white;
+
+#text_bottom {
+  position: absolute;
+  top: 10vh;
+  width: 113.5%;
+  height: 46vh;
+  background-color: black;
 }
+
+#text_bottom p{
+  color: white;
+  margin-top: 2vh;
+  margin-right: 6.8vh;
+  padding-left: 2vh;
+  padding-right: 1vh;
+  padding-top: 1vh;
+  padding-bottom: 0.5vh;
+}
+
+
+
 
 #blacklogo {
   position: relative;
@@ -239,7 +254,6 @@ body {
     margin-left: 2vh;
     left: var(--anchor-b);
     top: 31vh;
-    --slide-width : 108%
   }
 
 
@@ -248,7 +262,6 @@ body {
     margin-left: 2vh;
     left: var(--anchor-a);
     top: -16vh;
-    --slide-width : 103%;
   }
 
   #a-social{
@@ -257,7 +270,6 @@ body {
     left: -4vh;
     top: 48vh;   
     transform: scale(0.88);
-    --slide-width : 135%;
   }
 
   #a-aboutlpos{
@@ -302,6 +314,7 @@ body {
     z-index: 50;
     opacity: 0.50;
   }
+
 
 
 }
@@ -500,7 +513,7 @@ body {
   #pureblack_bottom {
     position: absolute;
     bottom: auto;
-    opacity: 0;
+    display: none;
   
   }
   
@@ -620,6 +633,7 @@ body {
 .a-slide p{
   font-size: var(--fs-1);
   color: black;
+  margin-right: 1vh;
 }
 
 
@@ -647,6 +661,7 @@ body {
   top: 2vh;
   margin-left: 8px;
   z-index: 1500;
+  width: 75%;
 }
 
 #a-social a{
@@ -683,7 +698,7 @@ body {
 #notification{
   display: none;
   position: absolute;
-  left: var(--anchor-b);
+  left: 33%;
   top: 68vh;
   z-index: 2000;
 	background-color:white; 
@@ -691,7 +706,7 @@ body {
   border:.1em solid;
 	border-color: #3229CF;
   border-radius:10px;
-  font-size: 2vmin;
+  font-size: 3vmin;
   padding:10px 10px 10px 10px;
   margin:10px;
   cursor: default;

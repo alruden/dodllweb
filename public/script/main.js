@@ -5,13 +5,10 @@ function dodlladdresscopy(id) {
   copyText.setSelectionRange(0, 99999);
   document.execCommand("copy");
   
-  if (document.body.clientWidth < 768){
-    return;
-  }
 
   let nel = document.getElementById('notification');
   let ntxt = document.getElementById('notification_text');
-  ntxt.innerHTML = `<b>'${copyText.value}'</b> copied to clipboard`;
+  ntxt.innerHTML = `Address copied to clipboard`;
   nel.style = 'display: block;';
   setTimeout(() => {
     nel.style = 'display: none;';
