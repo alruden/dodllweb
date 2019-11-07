@@ -457,6 +457,7 @@ body {
     font-size: 10vh;
     opacity: 1;
     text-align: center;
+    display: block;
   }
 
   #mined_txt {
@@ -466,6 +467,7 @@ body {
     top: 9vh;
     font-size: 5vh;
     opacity: 1;
+    display: block;
   }
 
   #mined_txt2 {
@@ -475,6 +477,7 @@ body {
     top: 9vh;
     font-size: 3vh;
     opacity: 1;
+    display: block;
   }
   
   #roubm3 {
