@@ -309,7 +309,7 @@ class KeeperManager {
 
   updateDU(update_height = true) {
     let xhr = new XMLHttpRequest();
-    let url = `http://144.91.84.150:1250/vote_status`;
+    let url = `./vote_status`;
     if (this.adr !== '') {
       url += `/${this.adr}`;
     }
