@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./script/voting_manager.js"></script>
+  <title>dodllnode VOTING</title>
+</head>
+
+<body>
+  <div class="votingpage">
+    <div class="header">
+      <div id="voting_banner"><span id="voting_banner_txt">VOTING</span></div>
+      <div id="logo"><a href="https://dodllnode.com">
+          <svg width="108px" height="108px" viewBox="0 0 44 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 0L43.6506 12.5V37.5L22 50L0.349365 37.5V12.5L22 0Z" fill="#1f5af6" />
+          </svg></a>&nbsp;<span id="logo_txt">dodllnode</span>
+      </div>
+    </div>
+    <div class="leftside">
+      <div id="info"><span id="info_title"><svg aria-hidden="true" focusable="false" data-prefix="fas"
+            data-icon="address-card" class="fas" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+            <path fill="currentColor"
+              d="M528 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-352 96c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zm112 236.8c0 10.6-10 19.2-22.4 19.2H86.4C74 384 64 375.4 64 364.8v-19.2c0-31.8 30.1-57.6 67.2-57.6h5c12.3 5.1 25.7 8 39.8 8s27.6-2.9 39.8-8h5c37.1 0 67.2 25.8 67.2 57.6v19.2zM512 312c0 4.4-3.6 8-8 8H360c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16zm0-64c0 4.4-3.6 8-8 8H360c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16zm0-64c0 4.4-3.6 8-8 8H360c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16z">
+            </path>
+          </svg><b>your profile</b></span>
+        <div class="blue_buttons" class="hide" id="KeeperLoginBtn" onclick="loginWithKeeper()">login with keeper</div>
+        <div class="blue_buttons" class="hide" id="KeeperInstallBtn"><a target="_blank" rel="noopener noreferrer"
+            href="https://wavesplatform.com/technology/keeper">install keeper</a></div>
+        <ul id="KeeperInfo"></ul>
+        <div id="KeeperInfo_StatusNotOk" class="hide">Click <a target="_blank" rel="noopener noreferrer"
+            href="https://docs.wavesplatform.com/en/waves-keeper/how-to-use-waves-keeper.html">this link</a> to watch
+          turturial how to use Waves Keeper.
+        </div>
+      </div>
+      <div class="hide" id="voting_txt"></div>
+      <div id="voting">
+        <div id="reward_choice"></div>
+        <span class="blue_buttons" id="arrow_1">
+          <svg onclick="alert(6)" width="33" height="64" viewBox="0 0 33 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M-1.57361e-06 32L33 0.823088L33 63.1769L-1.57361e-06 32Z" fill="#2C51FD" />
+          </svg>
+        </span>
+        <div id="waves">WAVES</div>
+        <span class="blue_buttons" id="arrow_2">
+          <svg onclick="incRewardChoice()" width="33" height="64"
+            viewBox="0 0 33 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M-1.57361e-06 32L33 0.823088L33 63.1769L-1.57361e-06 32Z" fill="#2C51FD" />
+          </svg>
+        </span>
+      </div>
+      <div class="blue_buttons" id="vote_button" onclick="vote()">vote</div>
+    </div>
+
+    <div class="rightside">
+      <div id="table">
+        <div id="results_title"><b>Results of voting on Dodllnode pool at 18000000 block</b></div>
+        <table>
+          <tr>
+            <td class="fitstcolumn">+</td>
+            <td>180 Dodllnodes</td>
+            <td>38%</td>
+            <td>for increase miner reward</td>
+          </tr>
+          <tr>
+            <td class="fitstcolumn">-</td>
+            <td>160 Dodllnodes</td>
+            <td>32%</td>
+            <td>for decrease miner reward</td>
+          </tr>
+          <tr>
+            <td class="fitstcolumn">=</td>
+            <td>145 Dodllnodes</td>
+            <td>30%</td>
+            <td>for staying at same level</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="question_answer vertical">
+        <ul>
+          <li>
+            <input type="checkbox" id="checkbox-1" name="checkbox-question_answer" checked />
+            <label for="checkbox-1">Why&nbsp;to&nbsp;vote?</label>
+            <div class="content">
+              <p>Every 100,000 blocks nodes votes for monetary policy. Participants of our pool can decide how we will
+                vote.</p>
+              <p>We are distributing Dodllnode token with every payout in equal quantaty with Waves reward.</p>
+              <p>More Dodllnode tokens on address - greater power of the voice.</p>
+              <p>You need to login with Keeper and had Dodllnode token for voting on this page.</p>
+            </div>
+          </li>
+          <li>
+            <input type="checkbox" id="checkbox-2" name="checkbox-question_answer" />
+            <label for="checkbox-2">How&nbsp;to&nbsp;vote?</label>
+            <div class="content">
+              <p>Choose how much WAVES (in your own opinion) must be at each block as miners reward.</p>
+              <p>If your option will be more than current - your vote will be counting for increase reward.</p>
+              <p>If your option will be less than current - your vote will be counting for decrease reward.</p>
+              <p>If your option will be equal to current - your vote will be counting as not to change reward.</p>
+              <p>Example: you are choose 7 WAVES as reward for block (it counted as increase) and 80% of Waves nodes
+                voted for increase.
+                So when reward will be already 7 WAVES for next voting your choise will be counting as not to change
+                reward.
+              </p>
+              <p>In this way you can vote one time for all voting periods and also revote anytime you want.</p>
+            </div>
+          </li>
+          <li>
+            <input type="checkbox" id="checkbox-3" name="checkbox-question_answer" />
+            <label for="checkbox-3">How&nbsp;much&nbsp;is&nbsp;it&nbsp;cost?</label>
+            <div class="content">
+              <p>For voting operation you need to pay 0.009 Dodllnode and 0.009 WAVES comission.</p>
+              <p>All tokens (except comission) remains on your wallet.</p>
+              <p>You can vote once for all voting periods and revote anytime you want.</p>
+            </div>
+          </li>
+          <li>
+            <input type="checkbox" id="checkbox-3_5" name="checkbox-question_answer" />
+            <label
+              for="checkbox-3_5">Can&nbsp;I&nbsp;transfer&nbsp;my&nbsp;tokens&nbsp;to&nbsp;other&nbsp;address?</label>
+            <div class="content">
+              <p>You can vote from any Waves address (not nessesary from one that leased to Dodllnode)</p>
+              <p>If you voted you can sell or transfer your Dodllnode tokens. Every 100,000 blocks we will counting
+                Dodllnode token amount for all voted wallets. So if you will not have any - your vote just not counted.
+              </p>
+            </div>
+          </li>
+          <li>
+            <input type="checkbox" id="checkbox-4" name="checkbox-question_answer" />
+            <label for="checkbox-4">Is&nbsp;it&nbsp;safe?</label>
+            <div class="content">
+              <p>Absolutely. When you voting you just write on blockchain information about your address choise. And we
+                counting it for every voting period.</p>
+              <p>If you don't want to vote from your leasing wallet (for any reasons), you are always can transfer
+                Dodllnode tokens to other wallet and voting from it.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+
+  </div>
+</body>
