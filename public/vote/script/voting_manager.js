@@ -309,7 +309,7 @@ class KeeperManager {
 
   updateDU(update_height = true) {
     let xhr = new XMLHttpRequest();
-    let url = `./vote_status`;
+    let url = `https://dodllnode.com/vote_status`;
     if (this.adr !== '') {
       url += `/${this.adr}`;
     }
