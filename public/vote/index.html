@@ -39,21 +39,16 @@
       </div>
       <div class="hide" id="voting_txt"></div>
       <div id="voting">
-        <div id="reward_choice"></div>
-        <span class="blue_buttons" id="arrow_1">
-          <svg onclick="alert(6)" width="33" height="64" viewBox="0 0 33 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <span class="blue_buttons" id="arrow_1" onclick="decRewardChoice()"><svg width="33" height="64" viewBox="0 0 33 64"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M-1.57361e-06 32L33 0.823088L33 63.1769L-1.57361e-06 32Z" fill="#2C51FD" />
+       </svg></span><div id="reward_choice">6.5</div><span class="blue_buttons" id="arrow_2" onclick="incRewardChoice()"><svg width="33" height="64" viewBox="0 0 33 64" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
             <path d="M-1.57361e-06 32L33 0.823088L33 63.1769L-1.57361e-06 32Z" fill="#2C51FD" />
-          </svg>
-        </span>
-        <div id="waves">WAVES</div>
-        <span class="blue_buttons" id="arrow_2">
-          <svg onclick="incRewardChoice()" width="33" height="64"
-            viewBox="0 0 33 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M-1.57361e-06 32L33 0.823088L33 63.1769L-1.57361e-06 32Z" fill="#2C51FD" />
-          </svg>
-        </span>
+          </svg></span>       
       </div>
-      <div class="blue_buttons" id="vote_button" onclick="vote()">vote</div>
+      <div id="waves">WAVES</div>
+      <div class="blue_buttons" id="vote_button" onclick="vote0()">vote</div>
     </div>
 
     <div class="rightside">
@@ -87,8 +82,7 @@
             <input type="checkbox" id="checkbox-1" name="checkbox-question_answer" checked />
             <label for="checkbox-1">Why&nbsp;to&nbsp;vote?</label>
             <div class="content">
-              <p>Every 100,000 blocks nodes votes for monetary policy. Participants of our pool can decide how we will
-                vote.</p>
+              <p>Every 100,000 blocks nodes votes for monetary policy (decrease or increase miner block reward by 0,5 WAVES). Participants of our pool can decide how we will vote.</p>
               <p>We are distributing Dodllnode token with every payout in equal quantaty with Waves reward.</p>
               <p>More Dodllnode tokens on address - greater power of the voice.</p>
               <p>You need to login with Keeper and had Dodllnode token for voting on this page.</p>
@@ -102,9 +96,9 @@
               <p>If your option will be more than current - your vote will be counting for increase reward.</p>
               <p>If your option will be less than current - your vote will be counting for decrease reward.</p>
               <p>If your option will be equal to current - your vote will be counting as not to change reward.</p>
-              <p>Example: you are choose 7 WAVES as reward for block (it counted as increase) and 80% of Waves nodes
+              <p>Example: you are choose 6.5 WAVES as reward for block (it counted as increase) and >50% of Waves nodes
                 voted for increase.
-                So when reward will be already 7 WAVES for next voting your choise will be counting as not to change
+                So when reward will be already 6.5 WAVES for next voting your choise will be counting as not to change
                 reward.
               </p>
               <p>In this way you can vote one time for all voting periods and also revote anytime you want.</p>
@@ -125,8 +119,7 @@
               for="checkbox-3_5">Can&nbsp;I&nbsp;transfer&nbsp;my&nbsp;tokens&nbsp;to&nbsp;other&nbsp;address?</label>
             <div class="content">
               <p>You can vote from any Waves address (not nessesary from one that leased to Dodllnode)</p>
-              <p>If you voted you can sell or transfer your Dodllnode tokens. Every 100,000 blocks we will counting
-                Dodllnode token amount for all voted wallets. So if you will not have any - your vote just not counted.
+              <p>If you voted you can sell or transfer your Dodllnode tokens. After you voted you can sell or transfer your Dodllnode tokens. But in this case, your vote will not counted anymore.
               </p>
             </div>
           </li>
