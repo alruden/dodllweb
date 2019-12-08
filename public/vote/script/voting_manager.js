@@ -233,7 +233,7 @@ class KeeperManager {
     if (this.adr === '') {
       vt += 'You need to login with KEEPER to vote. ';
     }
-    else if (this.adr_choice > -2) {
+    else if (this.adr_choice >= 0) {
       vt += `If your choice still is ${this.voteToWaves(ch)} WAVES reward for each block then there is no need to vote again. `;
     }
     document.getElementById('voting_txt').innerHTML = vt;
