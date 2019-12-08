@@ -32,7 +32,6 @@ class KeeperManager {
   }
 
   display(mode, text = '', color = 'black', timer = false) {
-    console.log('display', mode);
     switch (mode) {
       case 0:
         this.hide('KeeperInfo');
@@ -136,7 +135,6 @@ class KeeperManager {
         this.display(2, "Attempt to transfer unavailable funds!<br>You must have 0.009 Waves for transaction fee<br>and 0.009 Dodllnode for payment to vote!", 'red', true);
         break;
       default:
-        console.log(err);
         this.display(2, err.message, 'red', true);
         break;
     }
@@ -319,7 +317,6 @@ class KeeperManager {
 
     xhr.onload = () => {
       let data = JSON.parse(xhr.response);
-      console.log(data);
       this.reward = data.reward;
       this.updateTable(data.height, data.reward, data.vote_result);
       if (data.adr !== this.adr) { this.setWalletInfo(); return; };
